@@ -1,0 +1,16 @@
+{
+    "name": "parcel-plugin-interpolate-html",
+    "version": "1.0.0",
+    "main": "src/index.js",
+    "author": "Lukáš Krotovič <lukas@krotovic.cz>",
+    "repository": "https://github.com/krotovic/parcel-plugin-interpolate-html",
+    "dependencies": {
+        "escape-string-regexp": "^1.0.5"
+    },
+    "peerDependencies": {
+        "parcel-bundler": ">=1.10.3"
+    },
+    "devDependencies": {
+        "parcel-bundler": ">=1.10.3"
+    }
+}
