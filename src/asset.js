@@ -9,14 +9,9 @@ class InterpolateHtmlAsset extends HTMLAsset {
 
     interpolate(code) {
         const env = this.options.env;
-        Object.keys(env).forEach((envKey) => {
-            const replacement = env[envKey];
-            code = code.replace(
-                new RegExp('%' + escapeStringRegexp(envKey) + '%', 'g'),
-                replacement,
-            )
-        });
-        return code;
+        const regex = /%(\w.*?)%/g;
+        
+        return code.replace(regex, (match, envKey) => env[envKey] === undefined ? match : env[envKey]);
     }
 }
 
